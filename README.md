@@ -1,1 +1,4 @@
-# (Elif-Sancak) practical-javascript
+# (Elif-Sancak) 
+# practical-javascript
+
+javascript codes will be added soon ..
