@@ -1,73 +1,103 @@
-//VERSION-1 ARRAYS
 
-var todos = ["item1", "item2", "item3"];
-//undefined
+//VERSION-2 FUNCTIONS
 
-var todos = ["item1", "item2", "item3"];
-todos;
-//Array(3) ["item1", "item2", "item3"]
+function sayHiTo(person){
+    console.log('hi', person);
+    }
+    //undefined
 
-//-------------------------------------------------------------------------------
+    sayHiTo('gordon');
+    // hi gordon
+    // person = 'gordon'
 
-console.log('hello there', 'gordon');
-//undefined
+    //-------------------------------------------------------------------------------
 
-var todos = ["item1", "item2", "item3"];
-console.log(todos);
-//["item1", "item2", "item3"]
+    var todos = ['item1', 'item2', 'item3'];
+    //undefined
 
-var todos = ["item1", "item2", "item3"];
-console.log('todos');
-//todos
+    function displayTodos (){
+    console.log('My todos:', todos);
+    }
+    displayTodos();
+    //My todos: ["item1", "item2", "item3"]
+    
+    function addTodo(){
+    todos.push('new todo');
+    }
+    addTodo();
+    //undefined
 
-//-------------------------------------------------------------------------------
+    todos;
+    // ["item1", "item2", "item3", "new todo"]
 
-var todos = ["item1", "item2", "item3"];
-console.log('My todos:', todos);
-//My todos: ["item1", "item2", "item3"]
+    displayTodos();
+    //My todos: ["item1", "item2", "item3", "new todo"]
+    
+    //-------------------------------------------------------------------------------
 
-var todos = ["item1", "item2", "item3"];
-todos.push("item4");
-//4
-todos;
-//Array(4) [ "item1", "item2", "item3", "item4" ]
+    function addTodo (){
+    todos.push('new todo');
+    displayTodos();
+    }
+    addTodo();
+    // ["item1", "item2", "item3", "new todo", "new todo"]
+    
+    function addTodo (todo){
+    todos.push(todo);
+    displayTodos();
+    }
+    addTodo('hello there');
+    //My todos: ["item1", "item2", "item3", "new todo", "new todo", "hello there"]
 
-todos.push("item5");
-//5
-todos;
-//Array(5) [ "item1", "item2", "item3", "item4", "item5" ]
+    //-------------------------------------------------------------------------------
 
-var todos = [ "item1", "item2", "item3", "item4", "item5" ];
-todos[0];
-//"item1"
-todos[1];
-//"item2"
-todos[2];
-//"item3"
-todos[4];
-//"item5"
-todos[5];
-//undefined
+    function changeTodo (position, newValue){
+    todos[position] = newValue;
+    }
+    displayTodos();
+    //My todos: ["item1", "item2", "item3", "new todo", "new todo", "hello there"]
 
-//-------------------------------------------------------------------------------
+    changeTodo(0, 'changed');
+    //undefined
+    displayTodos();
+    //My todos: ["changed", "item2", "item3", "new todo", "new todo", "hello there"]
 
-var todos = [ "item1", "item2", "item3", "item4", "item5" ];
-todos[0] = 'item 1 updated';
-// "item 1 updated"
+    function changeTodo (position, newValue){
+    todos[position] = newValue;
+    displayTodos();
+    }
+    changeTodo(0, 'changed again');
+    //My todos: ["change again", "item2", "item3", "new todo", "new todo", "hello there"]
+    
+    //-------------------------------------------------------------------------------
 
-todos;
-//[ "item 1 updated", "item2", "item3", "item4", "item5" ]
-
-//-------------------------------------------------------------------------------
-
-var todos = [ "item 1 updated", "item2", "item3", "item4", "item5" ];
-todos.splice(0, 1);
-//[ "item 1 updated" ]
-todos;
-//[ "item2", "item3", "item4", "item5" ]
-todos.splice(3, 1);
-//[ "item 5" ]
-todos;
-//[ "item2", "item3", "item4" ]
-todos.splice(3, 1);
-//[]
+    function deleteTodo (){
+    todos.splice(position, 1);
+    displayTodos();
+    }
+    displayTodos();
+    //My todos: ["item2", "item3", "new todo", "new todo", "hello there"]
+    deleteTodo(0);
+    //My todos: [item3", "new todo", "new todo", "hello there"]
+    deleteTodo(2);
+    //My todos: [item3", "new todo", "hello there"]
+    
+    //-------------------------------------------------------------------------------
+    
+    // FUNCTIONS AND VARIABLES
+    var myName = 'Gordon';
+    
+    function sayName (){
+    console.log(myName);
+    }
+    sayName();
+    // 'Gordon'
+    
+    var myName = 'Gordon';
+    
+    function sayName (){
+    var secret = 'watchandcode';
+    console.log(myName);
+    }
+    console.log(secret);
+    // Error
