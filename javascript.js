@@ -61,9 +61,8 @@ addTodo("new todo");
 
 //My todos: [ "item1", "item2", "item3", "new todo" ]   // new value added in object (new todo)list
 
-console.log(todos);    
-// [ "item1", "item2", "item3", "new todo" ]    
-
+console.log(todos);
+// [ "item1", "item2", "item3", "new todo" ]
 
 function changeTodo(position, newValue) {
   todos[position] = newValue;
@@ -82,8 +81,38 @@ function deleteTodo(position) {
   displayTodos();
 }
 
-deleteTodo(3);   // ["changed", "item2", "item3"]   // last value deleted(new todo)
+deleteTodo(3); // ["changed", "item2", "item3"]   // last value deleted(new todo)
 
-changeTodo(0, 'item1');
+changeTodo(0, "item1");
 
-displayTodos();   //last result =>My todos: [ "item1", "item2", "item3" ]  // first value changed with (item1)
+displayTodos(); //last result =>My todos: [ "item1", "item2", "item3" ]  // first value changed with (item1)
+
+
+// VERSION-3 OBJECTS
+
+var todoList = {
+  todos: ["item1", "item2", "item3"],
+  displayTodos: function() {
+    console.log("My todos:", this.todos);
+  }
+};
+todoList.displayTodos();
+//My todos: [ "item1", "item2", "item3" ]
+
+var todoList = {
+  todos: ["item1", "item2", "item3"],
+  addTodo: function(todo) {
+    this.todos.push(todo);
+    this.displayTodos();
+  },
+  changeTodo: function(position, newValue) {
+    this.todos[position] = newValue;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    todos.splice(position, 1);
+    displayTodos();
+  }
+};
+
+
