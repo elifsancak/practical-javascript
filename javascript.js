@@ -39,3 +39,6 @@ todos;
 //[ "item2", "item3", "item4" ]
 todos.splice(3, 1);
 //[] 
+
+console.log(todos);  
+//last result:  Array(3) [ "item2", "item3", "item4" ]
