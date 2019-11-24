@@ -1,3 +1,4 @@
+// version 2
 var todos = ["item1", "item2", "item3"];
 
 function displayTodos() {
