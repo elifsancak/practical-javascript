@@ -9,7 +9,7 @@ todos;
 
 //-------------------------------------------------------------------------------
 
-console.log('hello there', 'gordon');
+console.log("hello there", "gordon");
 //undefined
 
 var todos = ["item1", "item2", "item3"];
@@ -17,13 +17,13 @@ console.log(todos);
 //["item1", "item2", "item3"]
 
 var todos = ["item1", "item2", "item3"];
-console.log('todos');
+console.log("todos");
 //todos
 
 //-------------------------------------------------------------------------------
 
 var todos = ["item1", "item2", "item3"];
-console.log('My todos:', todos);
+console.log("My todos:", todos);
 //My todos: ["item1", "item2", "item3"]
 
 var todos = ["item1", "item2", "item3"];
@@ -37,7 +37,7 @@ todos.push("item5");
 todos;
 //Array(5) [ "item1", "item2", "item3", "item4", "item5" ]
 
-var todos = [ "item1", "item2", "item3", "item4", "item5" ];
+var todos = ["item1", "item2", "item3", "item4", "item5"];
 todos[0];
 //"item1"
 todos[1];
@@ -51,8 +51,8 @@ todos[5];
 
 //-------------------------------------------------------------------------------
 
-var todos = [ "item1", "item2", "item3", "item4", "item5" ];
-todos[0] = 'item 1 updated';
+var todos = ["item1", "item2", "item3", "item4", "item5"];
+todos[0] = "item 1 updated";
 // "item 1 updated"
 
 todos;
@@ -60,7 +60,7 @@ todos;
 
 //-------------------------------------------------------------------------------
 
-var todos = [ "item 1 updated", "item2", "item3", "item4", "item5" ];
+var todos = ["item 1 updated", "item2", "item3", "item4", "item5"];
 todos.splice(0, 1);
 //[ "item 1 updated" ]
 todos;
