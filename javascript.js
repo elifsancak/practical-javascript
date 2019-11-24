@@ -87,7 +87,6 @@ changeTodo(0, "item1");
 
 displayTodos(); //last result =>My todos: [ "item1", "item2", "item3" ]  // first value changed with (item1)
 
-
 // VERSION-3 OBJECTS
 
 var todoList = {
@@ -115,4 +114,33 @@ var todoList = {
   }
 };
 
+// VERSION-4 BOOLEANS
+
+var todoList = {
+  todos: [],
+  displayTodos: function() {
+    console.log("My todos:", this.todos);
+  },
+  addTodo: function(todoText) {
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position, todoText) {
+    //this.todos[position] = newValue;
+    this.todos[position].todoText = todoText;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    todos.splice(position, 1);
+    displayTodos();
+  },
+  toggleCompleted: function(position) {
+    var todo = this.todos[position];
+    todo.completed = !todo.completed;
+    this.displayTodos();
+  }
+};
 
