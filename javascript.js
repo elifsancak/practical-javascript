@@ -120,6 +120,7 @@ var todoList = {
   todos: [],
   displayTodos: function() {
     console.log("My todos:", this.todos);
+    for (var i = 0; i < this.todos.legth; i++) {}
   },
   addTodo: function(todoText) {
     this.todos.push({
@@ -144,3 +145,59 @@ var todoList = {
   }
 };
 
+
+// VERSION-5 LOOPS OF LOGIC
+
+var todoList = {
+  todos: [],
+  displayTodos: function() {
+    if (this.todos.length === 0) {
+      console.log("your todo list is empty");
+    } else {
+      console.log("My todos:");
+      for (var i = 0; i < this.todos.legth; i++) {
+        if (this.todos[i].completed === true) {
+          console.log("(x)", this.todos[i].todoText);
+        } else {
+          console.log("( )", this.todos[i].todoText);
+        }
+      }
+    }
+  },
+  addTodo: function(todoText) {
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position, todoText) {
+    //this.todos[position] = newValue;
+    this.todos[position].todoText = todoText;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    todos.splice(position, 1);
+    displayTodos();
+  },
+  toggleCompleted: function(position) {
+    var todo = this.todos[position];
+    todo.completed = !todo.completed;
+    this.displayTodos();
+  }
+};
+
+
+//todoList.addTodo("first");          // My todos: () first
+
+//todoList.addTodo("second");        // My todos: () first () second
+
+//todoList.toggleCompleted(1);      // My todos: ()first (x)second
+
+//todoList.toggleCompleted(0);      // My todos: (x)first ()second
+
+//todoList.addTodo("fifth");       // My todos: ()first ()second ()third ()fourth ()fifth ()sixth
+
+//todoList.toggleCompleted(5);     // My todos: ()first ()second ()third ()fourth ()fifth (x)sixth
+
+//todoList.toggleCompleted(2);     // My todos: ()first ()second (x)third ()fourth ()fifth (x)sixth
