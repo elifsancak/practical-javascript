@@ -209,7 +209,7 @@ var todoList = {
       console.log("your todo list is empty");
     } else {
       console.log("My todos:");
-      for (var i = 0; i < this.todos.legth; i++) {
+      for (var i = 0; i < this.todos.length; i++) {
         if (this.todos[i].completed === true) {
           console.log("(x)", this.todos[i].todoText);
         } else {
