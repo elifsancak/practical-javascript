@@ -41,8 +41,6 @@ todos.splice(3, 1);
 
 console.log(todos);
 //last result:  Array(3) [ "item2", "item3", "item4" ]
-<<<<<<< HEAD
-=======
 
 // VERSION-2
 
@@ -438,4 +436,3 @@ var handlers = {
 // My todos: (x) a todo item
 //(again)(when write '0' in the text of add button then if click to toggle completed button)
 // My todos: ( ) a todo item
->>>>>>> master
