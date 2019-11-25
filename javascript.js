@@ -120,7 +120,7 @@ var todoList = {
   todos: [],
   displayTodos: function() {
     console.log("My todos:", this.todos);
-    for (var i = 0; i < this.todos.legth; i++) {}
+    for (var i = 0; i < this.todos.length; i++) {}
   },
   addTodo: function(todoText) {
     this.todos.push({
